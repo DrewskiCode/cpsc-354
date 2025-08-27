@@ -1,0 +1,52 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{The MU-Puzzle}
+\date{}
+
+\begin{document}
+\maketitle
+
+MI $\rightarrow$ MU
+
+\textbf{Rule 1:} If you possess a string whose last letter is \texttt{I}, add \texttt{U}.
+
+\textbf{Rule 2:} Suppose you have \texttt{Mx}, you may add \texttt{Mxx}.
+
+\textbf{Rule 3:} If \texttt{III} occurs in one of the strings, you may make a new string with \texttt{U} in place of \texttt{III}.
+
+\textbf{Rule 4:} If \texttt{UU}, you can drop it.
+
+\vspace{1em}
+
+MI \\
+MII $\; Mxx$ \\
+MIIII $\; Mxx$ \\
+MIIIIIIII $\; Mxx$ \\
+MUIIU $\; MIU$ \\
+$\varnothing$
+
+\vspace{1em}
+
+MI $\; \rightarrow$ use $Mxx$ rule $\infty$ times \\
+MIIII... \\
+
+I's are always a multiple of 2, thus not divisible by 3.
+
+\vspace{1em}
+
+\texttt{MUUU} \\
+\texttt{MIII}
+
+\vspace{1em}
+
+\textbf{Rule 1} does not affect \# of I's. \\
+\textbf{Rule 2} does not give divisible by 3. \\
+\textbf{Rule 3} does not change the \# of I's. \\
+\textbf{Rule 4} does not change the \# of I's. \\
+
+Bottom line, you will never get rid of all of the I's.
+
+\end{document}
