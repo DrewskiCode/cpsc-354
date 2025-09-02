@@ -1,13 +1,19 @@
-
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{hyperref} % For clickable table of contents
 
-\title{The MU-Puzzle}
+\title{CPSC 354 Report}
+\author{Drew Floyd} % Replace "Student Name" with your actual name
 \date{}
 
 \begin{document}
+
 \maketitle
+\tableofcontents
+\newpage
+
+\section{The MU-Puzzle}
 
 MI $\rightarrow$ MU
 
@@ -33,7 +39,7 @@ $\varnothing$
 MI $\; \rightarrow$ use $Mxx$ rule $\infty$ times \\
 MIIII... \\
 
-I's are always a multiple of 2, thus not divisible by 3.
+No matter what Rule you use you will never be able to get 0 Mod3, because I will always be 1 mod 3 or 2 mod 3
 
 \vspace{1em}
 
@@ -43,9 +49,10 @@ I's are always a multiple of 2, thus not divisible by 3.
 \vspace{1em}
 
 \textbf{Rule 1} does not affect \# of I's. \\
-\textbf{Rule 2} does not give divisible by 3. \\
-\textbf{Rule 3} does not change the \# of I's. \\
+\textbf{Rule 2} does not give 0 mod 3. \\
+\textbf{Rule 3} does not solve the problem as removing 3 I's does not change the output of mod3. \\
 \textbf{Rule 4} does not change the \# of I's. \\
 
-Bottom line, you will never get rid of all of the I's. Thus you cannot get MU from MI.
+We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot get MU from MI.
+
 \end{document}
