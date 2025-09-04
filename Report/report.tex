@@ -64,7 +64,7 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
 \begin{enumerate}
     \item $A = \{ \}$ \\
     \hspace*{1em} $R = \{ \}$
-
+% #1
     \begin{center}
         \begin{tikzpicture}
         \node[circle, draw, minimum size=1cm] (a) {};
@@ -74,9 +74,11 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
         \end{center}
     This diagram is terminating because there are no infinite loops, confluent because all paths lead to the same result, and has a unique normal form as there is only one final state.
 
+\vspace{4em}
+
     \item $A = \{ a \}$ \\
     \hspace*{1em} $R = \{ \}$
-
+% #2
     \begin{center}
     \begin{tikzpicture}
         \node[circle, draw, minimum size=1cm] (a) {$a$};
@@ -84,9 +86,11 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
     \end{center}
     This diagram is terminating because there are no infinite loops, confluent because all paths lead to the same result, and has a unique normal form as there is only one final state.
 
+\vspace{4em}
+
     \item $A = \{ a \}$ \\
     \hspace*{1em} $R = \{ (a,a) \}$
-
+% #3
     \begin{center}
     \begin{tikzpicture}
         \node[circle, draw, minimum size=1cm] (a) {$a$};
@@ -95,9 +99,11 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
     \end{center}
     This diagram is not terminating due to the presence of infinite loops, confluent because all paths merge, but does not have a unique normal form as multiple results are possible.
 
+\vspace{6em}
+
     \item $A = \{ a, b, c \}$ \\
     \hspace*{1em} $R = \{ (a,b), (a,b) \}$
-
+% #4
     \begin{center}
     \begin{tikzpicture}
         \node[circle, draw, minimum size=1cm] (a) {$a$};
@@ -109,9 +115,11 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
     \end{center}
     This diagram is terminating as there are no infinite loops, not confluent because paths diverge, and does not have a unique normal form due to multiple end states.
 
+\vspace{4em}
+
     \item $A = \{ a, b \}$ \\
     \hspace*{1em} $R = \{ (a,a), (a,b) \}$
-
+%  #5
     \begin{center}
     \begin{tikzpicture}
         \node[circle, draw, minimum size=1cm] (a) {$a$};
@@ -121,6 +129,8 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
     \end{tikzpicture}
     \end{center}
     This diagram is not terminating due to the presence of infinite loops, not confluent because paths diverge, and has a unique normal form due to having a single end state on b.
+
+\vspace{4em}
 
     \item $A = \{ a, b, c \}$ \\
     \hspace*{1em} $R = \{ (a,b), (b,b), (a,c) \}$
@@ -137,9 +147,11 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
     \end{center}
     This diagram is not terminating due to the presence of infinite loops, not confluent because paths diverge, and has a unique normal form due to having a single end state on c.
 
+\vspace{4em}
+
     \item $A = \{ a, b, c \}$ \\
     \hspace*{1em} $R = \{ (a,b), (b,b), (a,c), (c,c) \}$
-
+% #7
     \begin{center}
     \begin{tikzpicture}
         \node[circle, draw, minimum size=1cm] (a) {$a$};
@@ -152,6 +164,9 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
     \end{tikzpicture}
     \end{center}
     This diagram is not terminating due to the presence of infinite loops, not confluent because paths diverge, and does not have a unique normal form due to no end states.
+
+\vspace{4em}
+
 \end{enumerate}
 
 \section*{Properties}
@@ -166,7 +181,7 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
     7. & $\times$ & $\times$ & $\times$ \\
 \end{tabular}
 
-\vspace{1em}
+\vspace{4em}
 \noindent Terminating, Confluent, Unique Normal Form
 
 \end{document}
