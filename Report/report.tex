@@ -128,7 +128,7 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
         \draw[->] (a) edge[loop above] (a);
     \end{tikzpicture}
     \end{center}
-    This diagram is not terminating due to the presence of infinite loops, not confluent because paths diverge, and has a unique normal form due to having a single end state on b.
+    This diagram is not terminating due to the presence of infinite loops, confluent because all paths lead to b, it has a unique normal form as the single end state is b.
 
 \vspace{4em}
 
@@ -170,18 +170,19 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
 \end{enumerate}
 
 \section*{Properties}
-\begin{tabular}{c c c c}
-     & T & C & N \\ \hline
-    1. & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
-    2. & $\checkmark$ & $\checkmark$ & $\checkmark$ \\
-    3. & $\times$ & $\checkmark$ & $\times$ \\
-    4. & $\checkmark$ & $\times$ & $\times$ \\
-    5. & $\times$ & $\times$ & $\checkmark$ \\
-    6. & $\times$ & $\times$ & $\checkmark$ \\
-    7. & $\times$ & $\times$ & $\times$ \\
+\begin{tabular}{c c c c p{8cm}}
+     T & C & U & Example(s) & Explanation \\ \hline
+    True & True & True & 1, 2 & These examples terminate, are confluent, and have a unique normal form because all paths lead to a single final state without divergence or loops. \\
+    True & True & False & None & This state is impossible because confluence implies a unique normal form when termination is true. \\
+    True & False & True & None & This state is impossible because non-confluence means paths diverge, which contradicts having a unique normal form. \\
+    True & False & False & 4 & This example terminates but is not confluent due to diverging paths and does not have a unique normal form as multiple end states exist. \\
+    False & True & True & 5 & This example does not terminate because a is a loop, but since it loops on itself it can still be confluent and point to b to result in a unique normal form. \\
+    False & True & False & 3 & This example does not terminate but is confluent because all paths merge, though it does not have a unique normal form due to multiple results. \\
+    False & False & True & None & This state is impossible because non-termination and non-confluence contradict having a unique normal form. \\
+    False & False & False &  6, 7 & These examples do not terminate, are not confluent due to diverging paths, and do not have a unique normal form as no single end state exists. \\
 \end{tabular}
 
 \vspace{4em}
-\noindent Terminating, Confluent, Unique Normal Form
+\noindent T: Terminating, C: Confluent, U: Unique Normal Form
 
 \end{document}
