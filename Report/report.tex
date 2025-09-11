@@ -185,4 +185,48 @@ We can never get rid of all of the I's, 0 mod 3 is not possible. Thus you cannot
 \vspace{4em}
 \noindent T: Terminating, C: Confluent, U: Unique Normal Form
 
+\newpage
+\section{String Rewriting Excercise 5 and 5b}
+
+\[
+\begin{aligned}
+  ab &\to ba \\
+  ba &\to ab \\
+  aa &\to \varepsilon \\
+  b &\to \varepsilon
+\end{aligned}
+\]
+
+
+rewrite steps for abba and bababa: 
+\[
+\begin{aligned}
+  abba &\to abab \to \infty \\
+  abba &\to aaba \to aa \to \varepsilon \\
+  baba &\to \infty \\
+    \\
+  ababa &\to \infty \\
+  bababa &\to aaba \to aa \to a \\
+  bababa &\to \infty
+\end{aligned}
+\]
+
+\begin{enumerate}
+  \item The ARS is not terminating because there is an infinite loop in the first two rules, as they are inverses of each other.
+
+  \item Two equivalence classes: $b \to \varepsilon$ means $b$’s don’t matter, and $aa \to \varepsilon$ means $a$’s cancel in pairs.  
+  Normal forms:  
+  Even \# of $a$’s $\;\Rightarrow\; \varepsilon$  
+  Odd \# of $a$’s $\;\Rightarrow\; a$
+
+  \item You can make the ARS terminating without changing the equivalence classes by removing one of the rules involved in the loop (either $ab \to ba$ or $ba \to ab$).
+
+  \item Semantic question the ARS can answer: “Is the number of $a$’s even or odd?” This works because the complete invariant is the parity of \# of $a$’s.
+
+  \item If instead $aa \to a$, this changes the question from even-or-odd to:  
+  No $a$’s $\Rightarrow \varepsilon$  
+  At least one $a$ $\Rightarrow a$
+\end{enumerate}
+
+
 \end{document}
